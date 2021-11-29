@@ -19,7 +19,7 @@ export default {
   props: {
     value: {
       type: Array,
-      default: Array(10).fill(0)
+      default: () => Array(10).fill(0)
     }
   }
 }

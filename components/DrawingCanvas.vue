@@ -39,7 +39,7 @@ export default {
 
       this.context.lineTo(x, y)
       this.context.stroke()
-      this.$emit('onChange')
+      this.$emit('onChange', this.canvas)
     },
     dragStart (e) {
       const x = e.layerX
@@ -50,7 +50,7 @@ export default {
       this.context.stroke()
 
       this.isDrag = true
-      this.$emit('onChange')
+      this.$emit('onChange', this.canvas)
     },
     dragEnd (e) {
       this.context.closePath()
@@ -58,7 +58,7 @@ export default {
     },
     clear () {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
-      this.$emit('onChange')
+      this.$emit('onChange', this.canvas)
     }
   }
 }
