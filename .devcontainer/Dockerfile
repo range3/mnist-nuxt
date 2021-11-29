@@ -9,6 +9,7 @@ RUN apt-get update \
     && apt-get -y install --no-install-recommends \
       direnv \
       vim \
+      bash-completion \
     # Clean up
     && apt-get autoremove -y \
     && apt-get clean -y \
